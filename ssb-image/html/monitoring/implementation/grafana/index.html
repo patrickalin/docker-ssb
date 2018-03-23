@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Patrick Alin Site</title>
+    
+      <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="generator" content="Hugo 0.36.1" />
+<title>Implementation Grafana :: Patrick Alin Site</title>
+<link rel="shortcut icon" href="/images/favicon.png" type="image/x-icon" />
+<link href="/css/font-awesome.min.css" rel="stylesheet">
+<link href="/css/nucleus.css" rel="stylesheet">
+<link href="/theme-flex/style.css" rel="stylesheet">
+
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+<script src="/js/jquery-2.x.min.js"></script>
+<script type="text/javascript">
+      var baseurl = "\/";
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-79101-13', 'auto');
+  ga('send', 'pageview');
+
+</script>
+    
+  </head>
+  <body data-url="/monitoring/implementation/grafana/">
+    
+      <header>
+  <div class="logo">
+    
+	
+  
+    <a class="baselink" href="/">Patrick Alin Site</a>
+  
+
+  </div>
+  <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
+    <nav class="shortcuts">
+            <li class="" role="">
+                <a href="https://github.com/patrickalin"  rel="noopener">
+                  <i class='fa fa-github'></i> <label>Github repo</label>
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="https://pa.services.alin.be/"  rel="noopener">
+                  <i class='fa fa-bookmark'></i> <label>Hugo Documentation</label>
+                </a>
+            </li>
+            <li class="" role="">
+                <a href="/credits"  rel="noopener">
+                  <i class='fa fa-bullhorn'></i> <label>Credits</label>
+                </a>
+            </li>
+    </nav>
+</header>
+<article>
+  <aside>
+    <ul class="menu">
+          <li data-nav-id="/" class="dd-item">
+          <a href="/">
+            <i class="fa fa-fw fa-home"></i>
+          </a>
+          </li>
+    <li data-nav-id="/automation/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/automation/">Container</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/automation/ansible/" class="dd-item">
+        <div>
+          <a href="/automation/ansible/">
+            Ansible
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/container/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/container/">Container</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/container/portainer/" class="dd-item">
+        <div>
+          <a href="/container/portainer/">
+            Portainer
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/container/registry/" class="dd-item">
+        <div>
+          <a href="/container/registry/">
+            Registry
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/documentation/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/documentation/">Documentation</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/documentation/spf13-vim-3-0-release-and-new-website/" class="dd-item">
+        <div>
+          <a href="/documentation/spf13-vim-3-0-release-and-new-website/">
+            Hugo
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/shiori/" class="dd-item">
+        <div>
+          <a href="/documentation/shiori/">
+            Shiori
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/linux/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/linux/">Linux</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/linux/nfs/" class="dd-item">
+        <div>
+          <a href="/linux/nfs/">
+            NFS
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/linux/bash/" class="dd-item">
+        <div>
+          <a href="/linux/bash/">
+            bash
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/monitoring/" class="dd-item parent haschildren
+        ">
+      <div>
+      <a href="/monitoring/">Monitoring</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/monitoring/design/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/monitoring/design/">Design</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/monitoring/design/designalert/" class="dd-item">
+        <div>
+          <a href="/monitoring/design/designalert/">
+            Design Alert
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/monitoring/design/designgraph/" class="dd-item">
+        <div>
+          <a href="/monitoring/design/designgraph/">
+            Design Graph
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/monitoring/design/designmetrics/" class="dd-item">
+        <div>
+          <a href="/monitoring/design/designmetrics/">
+            Design Metrics Collector
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/monitoring/implementation/" class="dd-item parent haschildren
+        ">
+      <div>
+      <a href="/monitoring/implementation/">Implementation</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/monitoring/implementation/alert/" class="dd-item">
+        <div>
+          <a href="/monitoring/implementation/alert/">
+            Implementation Alert
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/monitoring/implementation/cadvisor/" class="dd-item">
+        <div>
+          <a href="/monitoring/implementation/cadvisor/">
+            Implementation Cadvisor
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/monitoring/implementation/grafana/" class="dd-item active">
+        <div>
+          <a href="/monitoring/implementation/grafana/">
+            Implementation Grafana
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/monitoring/implementation/prometheus/" class="dd-item">
+        <div>
+          <a href="/monitoring/implementation/prometheus/">
+            Implementation Prometheus
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/monitoring/architecture/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/monitoring/architecture/">Reference Architecture</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/monitoring/architecture/archalert/" class="dd-item">
+        <div>
+          <a href="/monitoring/architecture/archalert/">
+            Architecture Alert
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/monitoring/architecture/archgraph/" class="dd-item">
+        <div>
+          <a href="/monitoring/architecture/archgraph/">
+            Architecture Graph
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/monitoring/architecture/archmetrics/" class="dd-item">
+        <div>
+          <a href="/monitoring/architecture/archmetrics/">
+            Architecture Metrics Collector
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/rp/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/rp/">Reverse proxy</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/rp/traefik/" class="dd-item">
+        <div>
+          <a href="/rp/traefik/">
+            Traefik
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/sourcecontrol/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/sourcecontrol/">SCM</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/sourcecontrol/git/" class="dd-item">
+        <div>
+          <a href="/sourcecontrol/git/">
+            Source control
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/homeassistant/" class="dd-item
+        ">
+      <div>
+      <a href="/homeassistant/"></a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+
+
+
+
+    </ul>
+    <section><center>
+
+<a class="github-button" href="https://github.com/vjeantet/hugo-theme-docdock/archive/master.zip" data-icon="octicon-cloud-download" aria-label="Download vjeantet/hugo-theme-docdock on GitHub">Download</a>
+
+
+<a class="github-button" href="https://github.com/vjeantet/hugo-theme-docdock" data-icon="octicon-star" data-show-count="false" aria-label="Star vjeantet/hugo-theme-docdock on GitHub">Star</a>
+
+
+<a class="github-button" href="https://github.com/vjeantet/hugo-theme-docdock/fork" data-icon="octicon-repo-forked" data-show-count="true" aria-label="Fork vjeantet/hugo-theme-docdock on GitHub">Fork</a>
+
+</center>
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+    </section>
+  </aside>
+  <section class="page">
+    
+    <div class="nav-select">
+      <center>Navigation : 
+        <select onchange="javascript:location.href = this.value;">
+          
+    <option value="/automation/" >
+   Container</option>
+    <option value="/container/" >
+   Container</option>
+    <option value="/documentation/" >
+   Documentation</option>
+    <option value="/linux/" >
+   Linux</option>
+    <option value="/monitoring/" >
+   Monitoring</option> 
+    <option value="/monitoring/design/" >
+  - 
+   Design</option>
+    <option value="/monitoring/implementation/" >
+  - 
+   Implementation</option> 
+      <option value="/monitoring/implementation/alert/" >-- Implementation Alert</option>
+      <option value="/monitoring/implementation/cadvisor/" >-- Implementation Cadvisor</option>
+      <option value="/monitoring/implementation/grafana/"  selected>-- Implementation Grafana</option>
+      <option value="/monitoring/implementation/prometheus/" >-- Implementation Prometheus</option>
+  
+    <option value="/monitoring/architecture/" >
+  - 
+   Reference Architecture</option>
+  
+    <option value="/rp/" >
+   Reverse proxy</option>
+    <option value="/sourcecontrol/" >
+   SCM</option>
+    <option value="/homeassistant/" >
+   </option>
+
+
+
+        </select>
+      </center>
+    </div>
+      <div>
+        <div class="searchbox">
+          <input data-search-input id="search-by" type="text" placeholder="Search...">
+        </div>
+        <script type="text/javascript" src="/js/lunr.min.js"></script>
+        <script type="text/javascript" src="/js/auto-complete.js"></script>
+        <link href="/css/auto-complete.css" rel="stylesheet">
+        <script type="text/javascript">
+          
+              var baseurl = "\/";
+          
+        </script>
+        <script type="text/javascript" src="/js/search.js"></script>
+      </div>
+    
+
+    <h1>Implementation Grafana</h1>
+    
+    
+    
+    
+
+<h2 id="lien-grafana">Lien grafana</h2>
+
+<p><a href="http://grafana.services.alin.be" target="_blank"> Grafana </a><br></p>
+
+<h2 id="grafana-visualisation-tsdb">Grafana :  Visualisation TSDB</h2>
+<div class="highlight"><pre style="color:#272822;background-color:#fafafa;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-grafana" data-lang="grafana">count(rate(container_last_seen{name=~&#34;.+&#34;}[$interval]))</code></pre></div>
+    Implementation Grafana<br>
+0001-01-01 00:00:00 &#43;0000 UTC<br>
+/<br>
+monitoring/implementation/
+grafana
+
+
+    
+    
+        <div class="chevrons">
+    <div id="navigation">
+<a class="nav nav-prev" href="/monitoring/implementation/cadvisor/" title="Implementation Cadvisor"> <i class="fa fa-chevron-left"></i><label>Implementation Cadvisor</label></a>
+    <a class="nav nav-next" href="/monitoring/implementation/prometheus/" title="Implementation Prometheus" style="margin-right: 0px;"><label>Implementation Prometheus</label><i class="fa fa-chevron-right"></i></a></div>
+  </div>
+
+  </section>
+</article>
+
+<footer>
+
+<div class="footline">
+    
+
+    
+
+  
+
+    <div class="github-link">
+      <a href="https://github.com/patrickalinmonitoring/implementation/grafana.md" target="blank"><i class="fa fa-code-fork"></i>
+        Improve this page</a>
+    </div>
+  </div>
+
+
+	<div>
+
+
+  
+    <p>Patrick Alin</p>
+
+  
+
+
+
+	</div>
+</footer>
+
+<script src="/js/clipboard.min.js"></script>
+
+<link href="/css/featherlight.min.css" rel="stylesheet">
+<script src="/js/featherlight.min.js"></script>
+
+
+
+<script src="/theme-flex/script.js"></script>
+
+    
+
+    
+    
+
+    
+
+  </body>
+</html>

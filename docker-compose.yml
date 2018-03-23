@@ -1,0 +1,26 @@
+version: '3.5'
+
+services:
+  documentation:
+    image: registry.services.alin.be/ssb-alin:v1
+    deploy:
+      replicas: 1
+      resources:
+        limits:
+          cpus: "0.1"
+          memory: 50M
+      restart_policy:
+        condition: on-failure
+      labels:
+        - traefik.port=80
+        - traefik.frontend.rule=Host:ssb.services.alin.be
+        - traefik.frontend.entryPoints=http,https
+        - traefik.backend.loadbalancer.method=wrr
+      placement:
+        constraints:
+          - node.role == manager
+
+networks:
+  default:
+    external:
+      name: traefik-net

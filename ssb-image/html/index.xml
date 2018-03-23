@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Patrick Alin site on Patrick Alin Site</title>
+    <link>/</link>
+    <description>Recent content in Patrick Alin site on Patrick Alin Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 06 Apr 2012 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Architecture Alert</title>
+      <link>/monitoring/architecture/archalert/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/monitoring/architecture/archalert/</guid>
+      <description>Alert Each time that there is a problem (treeshold), one alarm is generated.
+ Send a email to one mailbox Admin Display alarm on one page for everybody  Type alert:
+ mail webhook  Data Is necessary to save each alarm for example save mail from the mailbox.
+Security No security, alarm are open for every body.
+DRP Mean time to recovery (MTTR) : 1 hour</description>
+    </item>
+    
+    <item>
+      <title>Architecture Graph</title>
+      <link>/monitoring/architecture/archgraph/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/monitoring/architecture/archgraph/</guid>
+      <description>Graph Graph is only when there is a problem. Nobody have to look graph.
+Data From the retention of metrics.
+Security No security, graph are open for everybody.</description>
+    </item>
+    
+    <item>
+      <title>Architecture Metrics Collector</title>
+      <link>/monitoring/architecture/archmetrics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/monitoring/architecture/archmetrics/</guid>
+      <description>Objective, overview Requirements What would you like to monitor ?
+ Application  Available (up, down) Response time (x ms)   For application, it&amp;rsquo;s preferable to use a Business Application Monitoring based on Opentracing.
+  OS from Physical, VM, Docker  Load Disk Network Up and Down   Who need of this metrics ?
+ Alert application Graph application  Interfaces/ interconnections  Possible to export data with API.</description>
+    </item>
+    
+    <item>
+      <title>Design Alert</title>
+      <link>/monitoring/design/designalert/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/monitoring/design/designalert/</guid>
+      <description> Choice possible :
+ Alertmanager from Prometheus. Alert from Grapha. Kapacitor from InfluxDat  Alertmanager Execute alertmanager in Docker. One instance is enough.
+Update version Update each month.
+Test  time to restart the service : time to restart the container time to reinstall the service : time to clone the git, et restart the container test alert Email test the webhook  </description>
+    </item>
+    
+    <item>
+      <title>Design Graph</title>
+      <link>/monitoring/design/designgraph/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/monitoring/design/designgraph/</guid>
+      <description>Graph Graph is only when there is a problem. Nobody have to look graph.
+Data From the retention of metrics.
+Security No security, graph are open for everybody.</description>
+    </item>
+    
+    <item>
+      <title>Design Metrics Collector</title>
+      <link>/monitoring/design/designmetrics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/monitoring/design/designmetrics/</guid>
+      <description>  Prometheus Influxdb  Lifecycle Update each month.
+Continuity of operations Data exchange Import data from /metrics
+Roles  admin : add new connector all : consult data  Constraints </description>
+    </item>
+    
+    <item>
+      <title>Implementation Alert</title>
+      <link>/monitoring/implementation/alert/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/monitoring/implementation/alert/</guid>
+      <description> Alertmanager / blackbox  Alerting  Lien alertmanager Alertmanager 
+Lien blackbox Blackbox 
+Run cd /opt/docker-prometheus/menu.sh  build deploy  </description>
+    </item>
+    
+    <item>
+      <title>Implementation Cadvisor</title>
+      <link>/monitoring/implementation/cadvisor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/monitoring/implementation/cadvisor/</guid>
+      <description> Récolte les métriques des containeurs.
+Lien Portainer Cadvisor 
+Run / Github  Github
+git clone https://github.com/patrickalin/docker-cadvisor.gitcd /opt/docker-cadvisor/menu.sh  build deploy  Image google/cadvisor
+ Insert localtime pour avoir le container avec la bonne date L&amp;rsquo;authentification est déjà dans l&amp;rsquo;application : par l&amp;rsquo;entrypoint et le fichier htpasswd Le healtcheck fonctionne  Docker-compose  /:/rootfs:ro /var/run:/var/run:rw /sys:/sys:ro /var/lib/docker/:/var/lib/docker:ro /dev/disk/:/dev/disk:ro  </description>
+    </item>
+    
+    <item>
+      <title>Implementation Grafana</title>
+      <link>/monitoring/implementation/grafana/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/monitoring/implementation/grafana/</guid>
+      <description>Lien grafana Grafana 
+Grafana : Visualisation TSDB count(rate(container_last_seen{name=~&amp;#34;.</description>
+    </item>
+    
+    <item>
+      <title>Implementation Prometheus</title>
+      <link>/monitoring/implementation/prometheus/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/monitoring/implementation/prometheus/</guid>
+      <description> Prometheus : Time Series Database Centralisation des metrics dans une time serie database :
+ machine viruelle ou physique container docker FN server  Lien prometheus Prometheus
+Lien cadvisor Cadvisor 
+Lien Node exporter Node exporter 
+Run /opt/docker-prometheus/menu.sh  build deploy  </description>
+    </item>
+    
+    <item>
+      <title>Source control</title>
+      <link>/sourcecontrol/git/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/sourcecontrol/git/</guid>
+      <description>git update-index &amp;ndash;assume-unchanged [ &amp;hellip;]</description>
+    </item>
+    
+    <item>
+      <title>Hugo</title>
+      <link>/documentation/spf13-vim-3-0-release-and-new-website/</link>
+      <pubDate>Fri, 06 Apr 2012 00:00:00 +0000</pubDate>
+      
+      <guid>/documentation/spf13-vim-3-0-release-and-new-website/</guid>
+      <description> Lien Hugo Ce site 
+Github  Github
+Source Edit :
+vim /opt/docker-hugo/hugo-image/src/content/documentation/hugo.md Run dev mode /opt/docker-hugo/hugo-image/src/run.sh Run prod mode /opt/docker-hugo/menu.sh  build deploy  </description>
+    </item>
+    
+    <item>
+      <title>Ansible</title>
+      <link>/automation/ansible/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/automation/ansible/</guid>
+      <description>Awx Ansible</description>
+    </item>
+    
+    <item>
+      <title>NFS</title>
+      <link>/linux/nfs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/linux/nfs/</guid>
+      <description>Install nfs apt-get install nfs-common</description>
+    </item>
+    
+    <item>
+      <title>Portainer</title>
+      <link>/container/portainer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/container/portainer/</guid>
+      <description>GUI pour géer les containeurs
+Lien Portainer Portainer 
+Run / Github  Github
+git clone https://github.com/patrickalin/docker-portainer.gitcd /opt/docker-portainer/menu.sh  build deploy  Image portainer/portainer
+ Insert localtime pour avoir le container avec la bonne date L&amp;rsquo;authentification est déjà dans l&amp;rsquo;application (ils n&amp;rsquo;ont pas prévu de reset password, il faut supprimer la DB) Impossible d&amp;rsquo;activer le health check c&amp;rsquo;est une demande https://github.com/portainer/portainer/issues/1364  Docker-compose  le sock docker est monté la DB est montée (obligé de la supprimer si on a perdu le password)  Docker Swarm Si on veut se connecter à un autre serveur, il faut ouvrir l&amp;rsquo;API de docker à la place du socket, pour ubuntu :</description>
+    </item>
+    
+    <item>
+      <title>Registry</title>
+      <link>/container/registry/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/container/registry/</guid>
+      <description> Lien Registry Registry Docker is registry.services.alin.be:80
+Registry 
+Github  Github
+Tag / push vim /etc/docker/daemon.json  { &amp;#34;metrics-addr&amp;#34; : &amp;#34;0.0.0.0:9323&amp;#34;, &amp;#34;experimental&amp;#34; : true, &amp;#34;insecure-registries&amp;#34; : [&amp;#34;registry.services.alin.be&amp;#34;,&amp;#34;morpheus.alin.be:5000&amp;#34;,&amp;#34;192.168.10.11:5000&amp;#34;], &amp;#34;registry-mirrors&amp;#34;: [&amp;#34;https://registry.services.alin.be&amp;#34;] } Lien Registy-ui Registry UI 
+Registry UI2 
+Run cd /opt/docker-registry/menu.sh   build deploy  </description>
+    </item>
+    
+    <item>
+      <title>Shiori</title>
+      <link>/documentation/shiori/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/documentation/shiori/</guid>
+      <description> Pour sauver vos bookmarks
+Lien Shiori Shiori 
+Run / Github  Github
+git clone https://github.com/patrickalin/docker-shiori.gitcd /opt/docker-portainer/menu.sh  build deploy  Image portainer/portainer
+ Insert localtime pour avoir le container avec la bonne date L&amp;rsquo;authentification est déjà dans l&amp;rsquo;application Health check  Docker-compose  la DB est montée  </description>
+    </item>
+    
+    <item>
+      <title>Traefik</title>
+      <link>/rp/traefik/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/rp/traefik/</guid>
+      <description> Lien Traefik Dashboard Traefik dashboard
+Lien Traefik Ping Traefik ping
+Github  Githubi Traefik
+Run /opt/docker-traefik/menu.sh  build deploy  </description>
+    </item>
+    
+    <item>
+      <title>bash</title>
+      <link>/linux/bash/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/linux/bash/</guid>
+      <description>vi .bashrc
+export GOROOT=/opt/go export PATH=$PATH:$GOROOT/bin:/opt/development/gopath/bin:/opt/node/bin export GOPATH=/opt/development/gopath alias vi=vim LS_COLORS=&amp;#39;*.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/_footer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/_footer/</guid>
+      <description>Patrick Alin</description>
+    </item>
+    
+    <item>
+      <title>Credits</title>
+      <link>/credits/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/credits/</guid>
+      <description>Other contribution  @patrickalin   Site Web Patrick Alin</description>
+    </item>
+    
+  </channel>
+</rss>
