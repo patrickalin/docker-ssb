@@ -10,7 +10,7 @@ defaultContentLanguage = "en"
 defaultContentLanguageInSubdir= false
 enableMissingTranslationPlaceholders = false
 
-gitURL = "httpsgithub.compatrickalin"
+gitURL = "https://github.com/patrickalin/docker-ssb/blob/master/ssb-image/src/content/"
 
 # [Languages]
 # [Languages.en]
