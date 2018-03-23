@@ -1,7 +1,7 @@
 +++
 title = "Design"
 description = "Metrics collector, Alert, Graph"
-weight = 1
+weight = 2
 +++
 ## Monitoring
 
