@@ -1,10 +1,15 @@
 +++
 title = "Architecture Alert"
 description = "Alerting : Email, Sms, Webhook, ..."
-weight = 1
 alwaysopen = true
+tags = [ "architecture", "alert" ]
+weight = 1
+date = "2018-03-23"
+categories = [
+  "architecture",
+  "alert"
+]
 +++
-
 # Alert
 
 Each time that there is a problem (treeshold), one alarm is generated.

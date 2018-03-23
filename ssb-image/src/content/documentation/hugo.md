@@ -9,7 +9,6 @@ categories = [
   "Development",
   "VIM"
 ]
-slug = "spf13-vim-3-0-release-and-new-website"
 +++
 ## Lien Hugo
 <a href="http://pa.cloud.smals.be/" target="new"> Ce site </a>
