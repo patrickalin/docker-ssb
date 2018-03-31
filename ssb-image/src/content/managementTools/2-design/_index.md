@@ -2,7 +2,7 @@
 title = "2- Design : Monitoring"
 description = "Design : Alertmanager, Cadvisor, Blackbox, Prometheus"
 tags = [ "monitoring", "design" ]
-weight = 1
+weight = 20
 date = "2018-03-23"
 +++
 # Monitoring
