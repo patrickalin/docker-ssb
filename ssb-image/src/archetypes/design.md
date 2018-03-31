@@ -27,4 +27,10 @@ weight: 1
 
 # Sizing
 
-...
+Users : 
+Size :
+
+# DRP
+
+Reinstall < 2 hours
+No data lost

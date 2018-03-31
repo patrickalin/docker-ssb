@@ -1,8 +1,8 @@
 ---
 ---
-title: "Implementation : ..."
-description: "Implementation : ..."
-tags: [ "Implementation", "..." ]
+title: "Implementation : GIT"
+description: "Implementation : GIT"
+tags: [ "Implementation", "GIT" ]
 date: 2018-03-25T22:00:16+02:00
 weight: 1
 ---
