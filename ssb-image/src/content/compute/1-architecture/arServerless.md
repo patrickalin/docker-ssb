@@ -1,5 +1,5 @@
 ---
-title: "RA : compute"
+title: "RA : Serverless"
 description: "Reference Architecture : serveless"
 tags: [ "RA", "serverless" ]
 date: 2018-03-25T22:26:21+02:00

@@ -1,8 +1,8 @@
 ---
-title: "RA : VM"
-description: "Reference Architecture : virtual machine"
-tags: [ "RA", "docker", "vm" ]
-date: 2018-03-25T22:26:21+02:00
+title: "RA : portal"
+description: "Reference Architecture : portal"
+tags: [ "RA", "web" ]
+date: 2018-03-25T22:02:46+02:00
 weight: 1
 ---
 # Use cases

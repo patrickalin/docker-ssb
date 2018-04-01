@@ -1,5 +1,5 @@
 ---
-title: "RA : ..."
+title: "RA : Compute"
 description: "Reference Architecture : compute"
 tags: [ "RA", "..." ]
 date: 2018-03-25T22:26:21+02:00

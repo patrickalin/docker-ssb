@@ -13,7 +13,7 @@ weight: 1
 
 ...
 
-# Interfaces/ interconnections 
+# Interfaces/ interconnections
 
 ...
 

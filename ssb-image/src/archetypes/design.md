@@ -29,8 +29,14 @@ weight: 1
 
 Users : 
 Size :
+growth rate :
+
+## Scaling :
+
 
 # DRP
 
 Reinstall < 2 hours
 No data lost
+
+# Security constraints
